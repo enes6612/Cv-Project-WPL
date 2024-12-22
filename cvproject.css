@@ -25,6 +25,7 @@ header{
     transform: skewY(-2deg);
     position: relative;
     width: 100%;
+    cursor: default;
 }
 header > div{
     transform: skewY(2deg);
@@ -39,7 +40,6 @@ header > div{
 .cv-photo{
     border-radius: 50%;
     width: 150px;
-    height: 200px;
     border: 4px solid white;
     transition: all 0.3s ease;
 }
@@ -96,12 +96,14 @@ header > div{
     padding-bottom: 8px;
     display: inline-block;
     font-size: 24px;
+    cursor: default;
 }
 .profile-info{
     display: flex;
     gap: 32px;
     margin-top: 16px;
     width: 1000px;
+    cursor: default;
 }
 .profile-info-item{
     background: #f8f9fa;
@@ -142,6 +144,10 @@ header > div{
     padding-bottom: 8px;
     display: inline-block;
     font-size: 24px;
+    cursor: default;
+}
+.over-mij p{
+    cursor: default;
 }
 .Werkervaring{
     background: white;
@@ -162,10 +168,12 @@ header > div{
     padding-bottom: 8px;
     display: inline-block;
     font-size: 24px;
+    cursor: default;
 }
 .werkervaring-list{
     list-style: none;
     width: 100%;
+    cursor: default;
 }
 .werkervaring-item{
     background: white;
@@ -211,10 +219,20 @@ header > div{
 .vaardigheden:hover{
     transform: translateY(-5px);
 }
+.vaardigheden h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
 .skills{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    cursor: default;
 }
 .skill-item{
     background: #e1f0fa;
@@ -240,6 +258,15 @@ header > div{
 .talenkennis:hover{
     transform: translateY(-5px);
 }
+.talenkennis h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+}
 .talen{
     display: flex;
     gap: 24px;
@@ -253,6 +280,7 @@ header > div{
     width: 200px;
     text-align: center;
     transition: all 0.3s ease;
+    cursor: default;
 }
 .talen-item:hover{
     transform: translateY(-3px);
@@ -296,11 +324,13 @@ header > div{
     padding-bottom: 8px;
     display: inline-block;
     font-size: 24px;
+    cursor: default;
 }
 table{
     width: 1000px;
     margin: 16px 0;
     border-collapse: collapse;
+    cursor: default;
 }
 table th{
     background: #2c3e50;
@@ -326,6 +356,7 @@ footer{
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    cursor: default;
 }
 footer ul{
     list-style: none;
@@ -347,6 +378,7 @@ footer button{
     padding: 16px;
     transition: all 0.3s ease;
     border-radius: 8px;
+    cursor: pointer;
 }
 footer button:hover{
     transform: scale(1.05);
