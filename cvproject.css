@@ -11,6 +11,10 @@ body {
 html{
     scroll-behavior: smooth;
 }
+a{
+    display: inline-block;
+    padding: 2px;
+}
 .container{
     max-width: 1200px;
     width: 95%;
@@ -38,6 +42,11 @@ header > div{
     position: relative;
     z-index: 1;
 }
+.cv-photo-container a{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
 .cv-photo{
     border-radius: 50%;
     width: 150px;
@@ -64,8 +73,17 @@ header > div{
 }
 .scroll-indicator {
     margin-top: 25px;
+    padding: 10px;
     animation: bounce 2s infinite;
     cursor: pointer;
+}
+.scroll-indicator p {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
@@ -378,8 +396,9 @@ footer button a{
     color: buttontext;
 }
 footer button{
-    margin: 5px;
-    padding: 16px;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px;
     transition: all 0.3s ease;
     border-radius: 8px;
     cursor: pointer;
@@ -389,7 +408,21 @@ footer button:hover{
     background: #3498db;
     color: white;
 }
+#button-to-top{
+    min-width: 200px;
+}
 @media (max-width: 768px) {
+    a{
+        padding: 8px;
+    }
+    .scroll-indicator{
+        padding: 15px;
+    }
+    .cv-photo-container{
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
     .werkervaring-bedrijving{
         padding: 16px;
     }
@@ -409,8 +442,12 @@ footer button:hover{
         text-align: center;
     }
     footer button{
-        margin: 10px 0;
+        padding: 16px 24px;
+        margin: 8px auto;
         width: 100%;
+        max-width: 400px;
+        height: 56px;
+        font-size: 16px;
     }
 }
 @media (max-width: 480px) {
@@ -420,8 +457,8 @@ footer button:hover{
     header{
         padding: 30px 10px;
     }
-    .cv-photo{
-        width: 120px;
+    .scroll-indicator{
+        padding: 20px;
     }
     .profile-info-item, .werkervaring-item, .talen-item{
         padding: 12px;
@@ -436,5 +473,13 @@ footer button:hover{
     table th, table td{
         padding: 12px;
         font-size: 14px;
+    }
+    footer{
+        padding: 20px;
+    }
+    footer button{
+        min-height: 48px;
+        font-size: 16px;
+        margin: 10px auto;
     }
 }
