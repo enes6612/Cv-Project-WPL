@@ -44,8 +44,8 @@ header > div{
 }
 .cv-photo-container a{
     display: inline-block;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 }
 .cv-photo{
     border-radius: 50%;
@@ -333,8 +333,6 @@ header > div{
     padding: 32px;
     margin-bottom: 32px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    width: 100%;
 }
 .opleiding:hover{
     transform: translateY(-5px);
@@ -369,6 +367,54 @@ table tr:nth-child(odd){
 .opleiding table td{
     padding: 16px;
     border-bottom: 1px solid #dee2e6;
+}
+.opleiding-cards{
+    display: none;
+    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.opleiding-cards:hover{
+    transform: translateY(-5px);
+}
+.opleiding-cards h2{
+    color: #2c3e50;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-size: 24px;
+    cursor: default;
+    vertical-align: top;
+}
+.opleiding-card{
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+.opleiding-card:hover{
+    transform: translateY(-5px);
+    background: #e1f0fa;
+}
+.opleiding-card-label{
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.opleiding-card-content{
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+.opleiding-card-content:last-child{
+    margin-bottom: 0;
 }
 footer{
     background: #2c3e50;
@@ -411,6 +457,35 @@ footer button:hover{
 #button-to-top{
     min-width: 200px;
 }
+@media (max-width: 1280px){
+    .over-mij p {
+        font-size: 25px;
+    }
+    .profile-info{
+        font-size: 20px;
+    }
+    .werkervaring-list{
+        font-size: 20px;
+    }
+    .skills{
+        font-size: 20px;
+    }
+    .talen{
+        font-size: 20px;
+    }
+    .opleiding{
+        font-size: 20px;
+    }
+}
+@media (max-width: 1000px){
+    body{
+        font-size: 20px;
+    }
+    .opleiding-cards{
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media (max-width: 768px) {
     a{
         padding: 8px;
@@ -429,13 +504,12 @@ footer button:hover{
     .talen{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-    .opleiding table{
-        display: block;
-        overflow-x: auto;
-
+    .opleiding{
+        display: none;
     }
-    .opleiding table td, th{
-        min-width: 200px;
+    .opleiding-card{
+        display: flex;
+        flex-direction: column;
     }
     footer{
         flex-direction: column;
@@ -460,19 +534,18 @@ footer button:hover{
     .scroll-indicator{
         padding: 20px;
     }
-    .profile-info-item, .werkervaring-item, .talen-item{
+    .profile-info-item, .werkervaring-item{
         padding: 12px;
     }
     .talen{
         grid-template-columns: 1fr;
     }
-    .talen-item{
-        margin: 0 auto;
-        width: 100%;
+    .opleiding table{
+        display: none;
     }
-    table th, table td{
-        padding: 12px;
-        font-size: 14px;
+    .opleiding-cards{
+        display: flex;
+        flex-direction: column;
     }
     footer{
         padding: 20px;
